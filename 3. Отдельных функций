@@ -1,0 +1,6 @@
+from math import factorial
+
+# ввод числа
+n = int(input("Введите целое число для вычисления факториала: "))
+
+print(f"Факториал числа {n} равен: {factorial(n)}")
