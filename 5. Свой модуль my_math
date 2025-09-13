@@ -1,0 +1,25 @@
+#1  my_math.py
+
+def factorial(n):
+    """
+    Вычисляет факториал числа n
+    Принимает n — неотрицательное целое число
+    Возвращает факториал числа n
+    """
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("n должно быть неотрицательным целым числом")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+# 2  main.py
+
+from my_math import factorial
+
+if __name__ == "__main__":
+    n = int(input("Введите неотрицательное целое число: "))
+    try:
+        print(f"Факториал числа {n} равен {factorial(n)}")
+    except ValueError as e:
+        print(f"Ошибка: {e}")
