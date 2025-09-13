@@ -1,1 +1,7 @@
 # class-1
+import math
+
+n = int(input("Введите целое неотрицательное число: "))
+factorial = math.factorial(n)
+
+print(factorial)
